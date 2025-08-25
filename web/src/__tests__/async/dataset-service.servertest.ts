@@ -9,14 +9,14 @@ import {
   getDatasetRunsTableMetricsCh,
   getScoresForDatasetRuns,
   getTraceScoresForDatasetRuns,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import { v4 } from "uuid";
-import { prisma } from "@langfuse/shared/src/db";
+import { prisma } from "@langfuse/shared/db";
 import {
   createObservation,
   createTraceScore,
   createTrace,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import {
   fetchDatasetItems,
   getRunItemsByRunIdOrItemId,

@@ -6,7 +6,7 @@ import {
   type Session,
 } from "next-auth";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { prisma } from "@langfuse/shared/src/db";
+import { prisma } from "@langfuse/shared/db";
 import { verifyPassword } from "@/src/features/auth-credentials/lib/credentialsServerUtils";
 import { parseFlags } from "@/src/features/feature-flags/utils";
 import { env } from "@/src/env.mjs";
@@ -46,7 +46,7 @@ import {
   sendResetPasswordVerificationRequest,
   instrumentAsync,
   logger,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import {
   getOrganizationPlanServerSide,
   getSelfHostedInstancePlanServerSide,

@@ -1,11 +1,11 @@
 import { createPrompt } from "@/src/features/prompts/server/actions/createPrompt";
 import { ApiAuthService } from "@/src/features/public-api/server/apiAuth";
 import { cors, runMiddleware } from "@/src/features/public-api/server/cors";
-import { prisma } from "@langfuse/shared/src/db";
+import { prisma } from "@langfuse/shared/db";
 import { isPrismaException } from "@/src/utils/exceptions";
 import { type NextApiRequest, type NextApiResponse } from "next";
 import { z } from "zod/v4";
-import { type Prompt } from "@langfuse/shared";
+import { type Prompt } from "@langfuse/shared/prisma";
 import {
   GetPromptSchema,
   LegacyCreatePromptSchema,
@@ -26,7 +26,7 @@ import {
   recordIncrement,
   traceException,
   logger,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import { RateLimitService } from "@/src/features/public-api/server/RateLimitService";
 import { telemetry } from "@/src/features/telemetry";
 

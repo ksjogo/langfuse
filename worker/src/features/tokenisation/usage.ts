@@ -1,4 +1,4 @@
-import { Model } from "@langfuse/shared";
+import { Model } from "@langfuse/shared/prisma";
 import { parseJsonPrioritised } from "@langfuse/shared/utils";
 import { isChatModel, isTiktokenModel } from "./types";
 import { countTokens } from "@anthropic-ai/tokenizer";
@@ -15,7 +15,7 @@ import {
   instrumentSync,
   logger,
   recordIncrement,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 
 const OpenAiTokenConfig = z.object({
   tokenizerModel: z.string().refine(isTiktokenModel, {

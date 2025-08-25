@@ -1,4 +1,4 @@
-import { prisma } from "@langfuse/shared/src/db";
+import { prisma } from "@langfuse/shared/db";
 import { withMiddlewares } from "@/src/features/public-api/server/withMiddlewares";
 import { createAuthedProjectAPIRoute } from "@/src/features/public-api/server/createAuthedProjectAPIRoute";
 import {
@@ -18,7 +18,7 @@ import {
   executeWithDatasetRunItemsStrategy,
   DatasetRunItemsOperationType,
   getObservationById,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import { v4 } from "uuid";
 import { createOrFetchDatasetRun } from "@/src/features/public-api/server/dataset-runs";
 import {

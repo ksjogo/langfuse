@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, beforeAll, afterAll } from "vitest";
 import { v4 } from "uuid";
-import { ActionExecutionStatus, JobConfigState } from "@langfuse/shared";
+import { ActionExecutionStatus, JobConfigState } from "@langfuse/shared/prisma";
 import { PromptType } from "@langfuse/shared/features/prompts";
 import {
   TriggerEventSource,
@@ -10,8 +10,8 @@ import {
   createOrgProjectAndApiKey,
   redis,
   EntityChangeEventType,
-} from "@langfuse/shared/src/server";
-import { ActionType, prisma } from "@langfuse/shared/src/db";
+} from "@langfuse/shared/server";
+import { ActionType, prisma } from "@langfuse/shared/db";
 import { promptVersionProcessor } from "../features/entityChange/promptVersionProcessor";
 
 describe("promptVersionChangeWorker", () => {

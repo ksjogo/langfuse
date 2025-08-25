@@ -3,11 +3,11 @@
 
 import { appRouter } from "@/src/server/api/root";
 import { createInnerTRPCContext } from "@/src/server/api/trpc";
-import { prisma } from "@langfuse/shared/src/db";
-import { createOrgProjectAndApiKey } from "@langfuse/shared/src/server";
+import { prisma } from "@langfuse/shared/db";
+import { createOrgProjectAndApiKey } from "@langfuse/shared/server";
 import type { Session } from "next-auth";
 import { v4 } from "uuid";
-import { ActionExecutionStatus, JobConfigState } from "@langfuse/shared";
+import { ActionExecutionStatus, JobConfigState } from "@langfuse/shared/prisma";
 import {
   type SafeWebhookActionConfig,
   type WebhookActionConfigWithSecrets,

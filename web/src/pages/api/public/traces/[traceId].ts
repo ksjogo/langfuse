@@ -9,14 +9,14 @@ import {
 } from "@/src/features/public-api/types/traces";
 import { filterAndValidateDbTraceScoreList } from "@langfuse/shared/features/scores";
 import { LangfuseNotFoundError } from "@langfuse/shared/errors";
-import { prisma } from "@langfuse/shared/src/db";
+import { prisma } from "@langfuse/shared/db";
 import {
   getObservationsForTrace,
   getScoresForTraces,
   getTraceById,
   traceException,
   traceDeletionProcessor,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import Decimal from "decimal.js";
 import { auditLog } from "@/src/features/audit-logs/auditLog";
 

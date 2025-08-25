@@ -9,13 +9,13 @@ import { throwIfNoProjectAccess } from "@/src/features/rbac/utils/checkProjectAc
 import {
   DashboardWidgetChartType,
   DashboardWidgetViews,
-} from "@langfuse/shared/src/db";
+} from "@langfuse/shared/db";
 import {
   DashboardService,
   DimensionSchema,
   MetricSchema,
   ChartConfigSchema,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import { views } from "@/src/features/query";
 import { TRPCError } from "@trpc/server";
 import { LangfuseConflictError } from "@langfuse/shared/errors";

@@ -11,7 +11,7 @@ import {
   AnnotationQueueObjectType,
   AnnotationQueueStatus,
   Prisma,
-} from "@langfuse/shared";
+} from "@langfuse/shared/prisma";
 
 import { paginationZod } from "@langfuse/shared/utils";
 import { type BatchTableNames } from "@langfuse/shared/interfaces";
@@ -25,7 +25,7 @@ import {
   getObservationById,
   getTraceIdsForObservations,
   logger,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod/v4";
 

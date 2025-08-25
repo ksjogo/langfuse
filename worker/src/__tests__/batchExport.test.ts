@@ -8,10 +8,10 @@ import {
   createScoresCh,
   createTrace,
   createTracesCh,
-} from "@langfuse/shared/src/server";
-import { DatasetStatus } from "@langfuse/shared";
+} from "@langfuse/shared/server";
+import { DatasetStatus } from "../../../packages/shared/dist/src/prisma";
 import { BatchExportTableName } from "@langfuse/shared/features/batchExport";
-import { prisma } from "@langfuse/shared/src/db";
+import { prisma } from "@langfuse/shared/db";
 import { getDatabaseReadStream } from "../features/database-read-stream/getDatabaseReadStream";
 
 describe("batch export test suite", () => {

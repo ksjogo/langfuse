@@ -1,11 +1,15 @@
-import { Prisma, type PrismaClient, type DatasetRunItems, type DatasetItem } from "@langfuse/shared";
+import {
+  Prisma,
+  type PrismaClient,
+  type DatasetRunItems,
+} from "@langfuse/shared/prisma";
 import { TracingSearchType } from "@langfuse/shared/interfaces";
 import { datasetItemFilterColumns } from "@langfuse/shared/tableDefinitions";
 import { FilterState } from "@langfuse/shared/types";
 import { filterAndValidateDbScoreList } from "@langfuse/shared/features/scores";
 
 import { optionalPaginationZod } from "@langfuse/shared/utils";
-import { prisma } from "@langfuse/shared/src/db";
+import { prisma } from "@langfuse/shared/db";
 import { z } from "zod/v4";
 import {
   clickhouseClient,
@@ -21,7 +25,7 @@ import {
   type ScoreRecordReadType,
   tableColumnsToSqlFilterAndPrefix,
   traceException,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import { aggregateScores } from "@/src/features/scores/lib/aggregateScores";
 import Decimal from "decimal.js";
 import { env } from "@/src/env.mjs";

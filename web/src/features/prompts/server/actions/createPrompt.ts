@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { type PromptDependency, type Prompt } from "@langfuse/shared";
+import { type PromptDependency, type Prompt } from "@langfuse/shared/prisma";
 import { jsonSchema, extractVariables } from "@langfuse/shared/utils";
 
 import {
@@ -10,7 +10,7 @@ import {
 } from "@langfuse/shared/features/prompts";
 
 import { InvalidRequestError } from "@langfuse/shared/errors";
-import { type PrismaClient } from "@langfuse/shared/src/db";
+import { type PrismaClient } from "@langfuse/shared/db";
 import { removeLabelsFromPreviousPromptVersions } from "@/src/features/prompts/server/utils/updatePromptLabels";
 import { updatePromptTagsOnAllVersions } from "@/src/features/prompts/server/utils/updatePromptTags";
 import {
@@ -18,7 +18,7 @@ import {
   PromptService,
   redis,
   extractPlaceholderNames,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import { promptChangeEventSourcing } from "@/src/features/prompts/server/promptChangeEventSourcing";
 
 export type CreatePromptParams = CreatePromptTRPCType & {

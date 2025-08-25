@@ -7,7 +7,7 @@ import {
   createTRPCRouter,
   protectedProjectProcedure,
 } from "@/src/server/api/trpc";
-import { type Prompt, Prisma } from "@langfuse/shared/src/db";
+import { type Prompt, Prisma } from "@langfuse/shared/db";
 import { createPrompt, duplicatePrompt } from "../actions/createPrompt";
 import { checkHasProtectedLabels } from "../utils/checkHasProtectedLabels";
 import { TracingSearchType } from "@langfuse/shared/interfaces";
@@ -34,7 +34,7 @@ import {
   getObservationsWithPromptName,
   getObservationMetricsForPrompts,
   getAggregatedScoresForPrompts,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import { aggregateScores } from "@/src/features/scores/lib/aggregateScores";
 import { TRPCError } from "@trpc/server";
 import { promptChangeEventSourcing } from "@/src/features/prompts/server/promptChangeEventSourcing";

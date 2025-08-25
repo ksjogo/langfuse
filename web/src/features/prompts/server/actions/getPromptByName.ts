@@ -1,12 +1,8 @@
-import { type Prompt } from "@langfuse/shared";
+import { type Prompt } from "@langfuse/shared/prisma";
 import { PRODUCTION_LABEL } from "@langfuse/shared/features/prompts";
 import { InvalidRequestError } from "@langfuse/shared/errors";
-import {
-  PromptService,
-  redis,
-  recordIncrement,
-} from "@langfuse/shared/src/server";
-import { prisma } from "@langfuse/shared/src/db";
+import { PromptService, redis, recordIncrement } from "@langfuse/shared/server";
+import { prisma } from "@langfuse/shared/db";
 
 type GetPromptByNameParams = {
   promptName: string;

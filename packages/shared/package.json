@@ -9,19 +9,19 @@
     "node": "20"
   },
   "exports": {
-    ".": {
-      "import": "./dist/src/index.js",
-      "require": "./dist/src/index.js"
+    "./prisma": {
+      "import": "./dist/src/prisma.js",
+      "require": "./dist/src/prisma.js"
     },
-    "./src/db": {
+    "./db": {
       "import": "./dist/src/db.js",
       "require": "./dist/src/db.js"
     },
-    "./src/server": {
+    "./server": {
       "import": "./dist/src/server/index.js",
       "require": "./dist/src/server/index.js"
     },
-    "./src/server/auth/apiKeys": {
+    "./server/auth/apiKeys": {
       "import": "./dist/src/server/auth/apiKeys.js",
       "require": "./dist/src/server/auth/apiKeys.js"
     },

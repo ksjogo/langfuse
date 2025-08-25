@@ -5,8 +5,8 @@ import {
   createTRPCRouter,
   protectedProjectProcedure,
 } from "@/src/server/api/trpc";
-import { CommentObjectType } from "@langfuse/shared";
-import { Prisma } from "@langfuse/shared";
+import { CommentObjectType } from "@langfuse/shared/prisma";
+import { Prisma } from "@langfuse/shared/prisma";
 import {
   CreateCommentData,
   DeleteCommentData,
@@ -14,10 +14,7 @@ import {
 import { auditLog } from "@/src/features/audit-logs/auditLog";
 import { TRPCError } from "@trpc/server";
 import { validateCommentReferenceObject } from "@/src/features/comments/validateCommentReferenceObject";
-import {
-  getTracesIdentifierForSession,
-  logger,
-} from "@langfuse/shared/src/server";
+import { getTracesIdentifierForSession, logger } from "@langfuse/shared/server";
 
 export const commentsRouter = createTRPCRouter({
   create: protectedProjectProcedure

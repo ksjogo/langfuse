@@ -1,4 +1,4 @@
-import { Prisma } from "@langfuse/shared";
+import { Prisma } from "@langfuse/shared/prisma";
 import { PromptType } from "@langfuse/shared/features/prompts";
 import {
   InvalidRequestError,
@@ -28,8 +28,8 @@ import {
   ExperimentMetadataSchema,
   LLMApiKeySchema,
   PromptContentSchema,
-} from "@langfuse/shared/src/server";
-import { kyselyPrisma, prisma } from "@langfuse/shared/src/db";
+} from "@langfuse/shared/server";
+import { kyselyPrisma, prisma } from "@langfuse/shared/db";
 import z from "zod/v4";
 import { createHash } from "crypto";
 import { env } from "../../env";

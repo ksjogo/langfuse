@@ -7,12 +7,12 @@ import {
   QueueName,
   redis,
   ZodModelConfig,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import {
   createTRPCRouter,
   protectedProjectProcedure,
 } from "@/src/server/api/trpc";
-import { type DatasetItem, DatasetStatus } from "@langfuse/shared";
+import { type DatasetItem, DatasetStatus } from "@langfuse/shared/prisma";
 import {
   extractPlaceholderNames,
   type PromptMessage,

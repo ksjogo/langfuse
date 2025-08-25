@@ -32,12 +32,12 @@ import {
   executeWithDatasetRunItemsStrategy,
   getDatasetItemIdsByTraceIdCh,
   mapDatasetRunItemFilterColumn,
-} from "@langfuse/shared/src/server";
+} from "@langfuse/shared/server";
 import {
   mapTraceFilterColumn,
   requiresDatabaseLookup,
 } from "./traceFilterUtils";
-import { Prisma, DatasetItem } from "@langfuse/shared";
+import { Prisma, DatasetItem } from "@langfuse/shared/prisma";
 import { ScoreSource, TraceDomain, Observation } from "@langfuse/shared/domain";
 import { evalDatasetFormFilterCols } from "@langfuse/shared/tableDefinitions";
 
@@ -56,7 +56,7 @@ import {
   QUEUE_ERROR_MESSAGES,
 } from "@langfuse/shared/errors";
 import { ChatMessageRole } from "@langfuse/shared/server/llm/types";
-import { kyselyPrisma, prisma } from "@langfuse/shared/src/db";
+import { kyselyPrisma, prisma } from "@langfuse/shared/db";
 import { backOff } from "exponential-backoff";
 import { callStructuredLLM, compileHandlebarString } from "../utils";
 import { env } from "../../env";
